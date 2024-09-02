@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        arch: ['arm64']
+        arch: ['armhf']
     uses: torizon/torizon-deb-ci/.github/workflows/toradex-deb-ci.yml@main
     with:
       arch: ${{ matrix.arch }}
@@ -20,4 +20,3 @@ jobs:
       run-attestation: true
       run-piuparts: false
       upload-artifacts: true
-      extra-packages: ca-certificates
