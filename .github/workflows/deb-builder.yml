@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        arch: ['armhf']
+        arch: ['armhf', 'arm64', 'amd64']
     uses: torizon/torizon-deb-ci/.github/workflows/toradex-deb-ci.yml@main
     with:
       arch: ${{ matrix.arch }}
